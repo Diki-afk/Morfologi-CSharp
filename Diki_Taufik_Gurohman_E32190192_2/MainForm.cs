@@ -124,5 +124,43 @@ namespace Diki_Taufik_Gurohman_E32190192_2
 			//tampilkan hasil gambar2 yang sudah diaplikasikan filter pada pictureBox2
 			pictureBox2.Image = gambar2;
 		}
+		void BrightNessToolStripMenuItemClick(object sender, EventArgs e)
+		{
+			if (gambar==null) return;
+			gambar2 = gambar.Clone(new Rectangle(0,0,gambar.Width,gambar.Height),
+			                       System.Drawing.Imaging.PixelFormat.Format24bppRgb);
+			
+			AForge.Imaging.ImageStatistics stat = new AForge.Imaging.ImageStatistics( gambar2 );
+			int max = Math.Max(Math.Max(stat.Red.Max, stat.Green.Max), stat.Blue.Max);
+			BrightnessCorrection brightnessCorrection = new BrightnessCorrection(255-max);
+			brightnessCorrection.ApplyInPlace(gambar2);
+			pictureBox2.Image = gambar2;
+		}
+		void Brightness20ToolStripMenuItemClick(object sender, EventArgs e)
+		{
+			//jika gambar kosong/null maka akan mengembalikan nilai kosong/null
+			if (gambar==null) return;
+			//membuat filter dari inisiasi class Closing() pada objek closing
+			BrightnessCorrection brignessCorrection = new BrightnessCorrection(20);
+			//clone variable gambar pada variable gambar2
+			gambar2 = (Bitmap) gambar.Clone();
+			//aplikasikan filter objek closing pada gambar2
+			brignessCorrection.ApplyInPlace(gambar2);
+			//tampilkan hasil gambar2 yang sudah diaplikasikan filter pada pictureBox2
+			pictureBox2.Image = gambar2;
+		}
+		void ContrastCorrectionToolStripMenuItemClick(object sender, EventArgs e)
+		{
+			//jika gambar kosong/null maka akan mengembalikan nilai kosong/null
+			if (gambar==null) return;
+			//membuat filter dari inisiasi class Closing() pada objek closing
+			ContrastCorrection contrastCorrection = new ContrastCorrection(25);
+			//clone variable gambar pada variable gambar2
+			gambar2 = (Bitmap) gambar.Clone();
+			//aplikasikan filter objek closing pada gambar2
+			contrastCorrection.ApplyInPlace(gambar2);
+			//tampilkan hasil gambar2 yang sudah diaplikasikan filter pada pictureBox2
+			pictureBox2.Image = gambar2;
+		}
 	}
 }

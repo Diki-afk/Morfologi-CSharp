@@ -24,6 +24,18 @@ namespace Diki_Taufik_Gurohman_E32190192_2
 		private System.Windows.Forms.PictureBox pictureBox2;
 		private System.Windows.Forms.Button button1;
 		private System.Windows.Forms.Button button2;
+		private System.Windows.Forms.ToolStripMenuItem deteksiToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem kMeansToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem prosesToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem brightNessToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem brightness20ToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem contrastCorrectionToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem sepiaToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem grayscaleToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem blurToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem sharpenToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem invertToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem thresholdingToolStripMenuItem;
 		
 		/// <summary>
 		/// Disposes resources used by the form.
@@ -52,6 +64,18 @@ namespace Diki_Taufik_Gurohman_E32190192_2
 			this.dilasiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.openingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.closingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.deteksiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.kMeansToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.prosesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.brightNessToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.brightness20ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.contrastCorrectionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.sepiaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.grayscaleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.blurToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.sharpenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.invertToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.thresholdingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.pictureBox2 = new System.Windows.Forms.PictureBox();
 			this.button1 = new System.Windows.Forms.Button();
@@ -64,7 +88,10 @@ namespace Diki_Taufik_Gurohman_E32190192_2
 			// menuStrip1
 			// 
 			this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-			this.morfologiToolStripMenuItem});
+			this.morfologiToolStripMenuItem,
+			this.deteksiToolStripMenuItem,
+			this.kMeansToolStripMenuItem,
+			this.prosesToolStripMenuItem});
 			this.menuStrip1.Location = new System.Drawing.Point(0, 0);
 			this.menuStrip1.Name = "menuStrip1";
 			this.menuStrip1.Size = new System.Drawing.Size(555, 24);
@@ -109,6 +136,91 @@ namespace Diki_Taufik_Gurohman_E32190192_2
 			this.closingToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
 			this.closingToolStripMenuItem.Text = "Closing";
 			this.closingToolStripMenuItem.Click += new System.EventHandler(this.ClosingToolStripMenuItemClick);
+			// 
+			// deteksiToolStripMenuItem
+			// 
+			this.deteksiToolStripMenuItem.Name = "deteksiToolStripMenuItem";
+			this.deteksiToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
+			this.deteksiToolStripMenuItem.Text = "Deteksi";
+			// 
+			// kMeansToolStripMenuItem
+			// 
+			this.kMeansToolStripMenuItem.Name = "kMeansToolStripMenuItem";
+			this.kMeansToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
+			this.kMeansToolStripMenuItem.Text = "K-Means";
+			// 
+			// prosesToolStripMenuItem
+			// 
+			this.prosesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+			this.brightNessToolStripMenuItem,
+			this.brightness20ToolStripMenuItem,
+			this.contrastCorrectionToolStripMenuItem,
+			this.sepiaToolStripMenuItem,
+			this.grayscaleToolStripMenuItem,
+			this.blurToolStripMenuItem,
+			this.sharpenToolStripMenuItem,
+			this.invertToolStripMenuItem,
+			this.thresholdingToolStripMenuItem});
+			this.prosesToolStripMenuItem.Name = "prosesToolStripMenuItem";
+			this.prosesToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
+			this.prosesToolStripMenuItem.Text = "Proses";
+			// 
+			// brightNessToolStripMenuItem
+			// 
+			this.brightNessToolStripMenuItem.Name = "brightNessToolStripMenuItem";
+			this.brightNessToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
+			this.brightNessToolStripMenuItem.Text = "Brightness Correction (Auto)";
+			this.brightNessToolStripMenuItem.Click += new System.EventHandler(this.BrightNessToolStripMenuItemClick);
+			// 
+			// brightness20ToolStripMenuItem
+			// 
+			this.brightness20ToolStripMenuItem.Name = "brightness20ToolStripMenuItem";
+			this.brightness20ToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
+			this.brightness20ToolStripMenuItem.Text = "Brightness +20";
+			this.brightness20ToolStripMenuItem.Click += new System.EventHandler(this.Brightness20ToolStripMenuItemClick);
+			// 
+			// contrastCorrectionToolStripMenuItem
+			// 
+			this.contrastCorrectionToolStripMenuItem.Name = "contrastCorrectionToolStripMenuItem";
+			this.contrastCorrectionToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
+			this.contrastCorrectionToolStripMenuItem.Text = "Contrast Correction";
+			this.contrastCorrectionToolStripMenuItem.Click += new System.EventHandler(this.ContrastCorrectionToolStripMenuItemClick);
+			// 
+			// sepiaToolStripMenuItem
+			// 
+			this.sepiaToolStripMenuItem.Name = "sepiaToolStripMenuItem";
+			this.sepiaToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
+			this.sepiaToolStripMenuItem.Text = "Sepia";
+			// 
+			// grayscaleToolStripMenuItem
+			// 
+			this.grayscaleToolStripMenuItem.Name = "grayscaleToolStripMenuItem";
+			this.grayscaleToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
+			this.grayscaleToolStripMenuItem.Text = "Grayscale";
+			// 
+			// blurToolStripMenuItem
+			// 
+			this.blurToolStripMenuItem.Name = "blurToolStripMenuItem";
+			this.blurToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
+			this.blurToolStripMenuItem.Text = "Blur";
+			// 
+			// sharpenToolStripMenuItem
+			// 
+			this.sharpenToolStripMenuItem.Name = "sharpenToolStripMenuItem";
+			this.sharpenToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
+			this.sharpenToolStripMenuItem.Text = "Sharpen";
+			// 
+			// invertToolStripMenuItem
+			// 
+			this.invertToolStripMenuItem.Name = "invertToolStripMenuItem";
+			this.invertToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
+			this.invertToolStripMenuItem.Text = "Invert";
+			// 
+			// thresholdingToolStripMenuItem
+			// 
+			this.thresholdingToolStripMenuItem.Name = "thresholdingToolStripMenuItem";
+			this.thresholdingToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
+			this.thresholdingToolStripMenuItem.Text = "Thresholding";
 			// 
 			// pictureBox1
 			// 
