@@ -140,11 +140,11 @@ namespace Diki_Taufik_Gurohman_E32190192_2
 		{
 			//jika gambar kosong/null maka akan mengembalikan nilai kosong/null
 			if (gambar==null) return;
-			//membuat filter dari inisiasi class Closing() pada objek closing
+			//membuat filter dari inisiasi class BrightnessCorrection() dengan nilai 20 pada objek brignessCorrection
 			BrightnessCorrection brignessCorrection = new BrightnessCorrection(20);
 			//clone variable gambar pada variable gambar2
 			gambar2 = (Bitmap) gambar.Clone();
-			//aplikasikan filter objek closing pada gambar2
+			//aplikasikan filter objek brignessCorrection pada gambar2
 			brignessCorrection.ApplyInPlace(gambar2);
 			//tampilkan hasil gambar2 yang sudah diaplikasikan filter pada pictureBox2
 			pictureBox2.Image = gambar2;
@@ -153,12 +153,51 @@ namespace Diki_Taufik_Gurohman_E32190192_2
 		{
 			//jika gambar kosong/null maka akan mengembalikan nilai kosong/null
 			if (gambar==null) return;
-			//membuat filter dari inisiasi class Closing() pada objek closing
+			//membuat filter dari inisiasi class ContrastCorrection() dengan nilai 25 pada objek contrastCorrection
 			ContrastCorrection contrastCorrection = new ContrastCorrection(25);
 			//clone variable gambar pada variable gambar2
 			gambar2 = (Bitmap) gambar.Clone();
-			//aplikasikan filter objek closing pada gambar2
+			//aplikasikan filter objek contrastCorrection pada gambar2
 			contrastCorrection.ApplyInPlace(gambar2);
+			//tampilkan hasil gambar2 yang sudah diaplikasikan filter pada pictureBox2
+			pictureBox2.Image = gambar2;
+		}
+		void SepiaToolStripMenuItemClick(object sender, EventArgs e)
+		{
+			//jika gambar kosong/null maka akan mengembalikan nilai kosong/null
+			if (gambar==null) return;
+			//membuat filter dari inisiasi class Sepia() pada objek sepia
+			Sepia sepia = new Sepia( );
+			//clone variable gambar pada variable gambar2
+			gambar2 = (Bitmap) gambar.Clone();
+			//aplikasikan filter objek sepia pada gambar2
+			sepia.ApplyInPlace(gambar2);
+			//tampilkan hasil gambar2 yang sudah diaplikasikan filter pada pictureBox2
+			pictureBox2.Image = gambar2;
+		}
+		void BlurToolStripMenuItemClick(object sender, EventArgs e)
+		{
+			//jika gambar kosong/null maka akan mengembalikan nilai kosong/null
+			if (gambar==null) return;
+			//membuat filter dari inisiasi class Blur() pada objek blur
+			Blur blur = new Blur( );
+			//clone variable gambar pada variable gambar2
+			gambar2 = (Bitmap) gambar.Clone();
+			//aplikasikan filter objek blur pada gambar2
+			blur.ApplyInPlace(gambar2);
+			//tampilkan hasil gambar2 yang sudah diaplikasikan filter pada pictureBox2
+			pictureBox2.Image = gambar2;
+		}
+		void SharpenToolStripMenuItemClick(object sender, EventArgs e)
+		{
+			//jika gambar kosong/null maka akan mengembalikan nilai kosong/null
+			if (gambar==null) return;
+			//membuat filter dari inisiasi class Sharpen() pada objek sharpen
+			Sharpen sharpen = new Sharpen( );
+			//clone variable gambar pada variable gambar2
+			gambar2 = (Bitmap) gambar.Clone();
+			//aplikasikan filter objek sharpen pada gambar2
+			sharpen.ApplyInPlace(gambar2);
 			//tampilkan hasil gambar2 yang sudah diaplikasikan filter pada pictureBox2
 			pictureBox2.Image = gambar2;
 		}

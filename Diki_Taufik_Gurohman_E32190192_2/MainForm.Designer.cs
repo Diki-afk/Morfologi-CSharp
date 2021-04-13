@@ -191,6 +191,7 @@ namespace Diki_Taufik_Gurohman_E32190192_2
 			this.sepiaToolStripMenuItem.Name = "sepiaToolStripMenuItem";
 			this.sepiaToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
 			this.sepiaToolStripMenuItem.Text = "Sepia";
+			this.sepiaToolStripMenuItem.Click += new System.EventHandler(this.SepiaToolStripMenuItemClick);
 			// 
 			// grayscaleToolStripMenuItem
 			// 
@@ -203,12 +204,14 @@ namespace Diki_Taufik_Gurohman_E32190192_2
 			this.blurToolStripMenuItem.Name = "blurToolStripMenuItem";
 			this.blurToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
 			this.blurToolStripMenuItem.Text = "Blur";
+			this.blurToolStripMenuItem.Click += new System.EventHandler(this.BlurToolStripMenuItemClick);
 			// 
 			// sharpenToolStripMenuItem
 			// 
 			this.sharpenToolStripMenuItem.Name = "sharpenToolStripMenuItem";
 			this.sharpenToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
 			this.sharpenToolStripMenuItem.Text = "Sharpen";
+			this.sharpenToolStripMenuItem.Click += new System.EventHandler(this.SharpenToolStripMenuItemClick);
 			// 
 			// invertToolStripMenuItem
 			// 
