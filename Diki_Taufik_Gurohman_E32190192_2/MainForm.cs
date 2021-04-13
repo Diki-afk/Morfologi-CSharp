@@ -140,7 +140,7 @@ namespace Diki_Taufik_Gurohman_E32190192_2
 		{
 			//jika gambar kosong/null maka akan mengembalikan nilai kosong/null
 			if (gambar==null) return;
-			//membuat filter dari inisiasi class BrightnessCorrection() dengan nilai 20 pada objek brignessCorrection
+			//membuat filter dari inisiasi class BrightnessCorrection() dengan argumen 20 pada objek brignessCorrection
 			BrightnessCorrection brignessCorrection = new BrightnessCorrection(20);
 			//clone variable gambar pada variable gambar2
 			gambar2 = (Bitmap) gambar.Clone();
@@ -153,7 +153,7 @@ namespace Diki_Taufik_Gurohman_E32190192_2
 		{
 			//jika gambar kosong/null maka akan mengembalikan nilai kosong/null
 			if (gambar==null) return;
-			//membuat filter dari inisiasi class ContrastCorrection() dengan nilai 25 pada objek contrastCorrection
+			//membuat filter dari inisiasi class ContrastCorrection() dengan argumen 25 pada objek contrastCorrection
 			ContrastCorrection contrastCorrection = new ContrastCorrection(25);
 			//clone variable gambar pada variable gambar2
 			gambar2 = (Bitmap) gambar.Clone();
@@ -199,6 +199,42 @@ namespace Diki_Taufik_Gurohman_E32190192_2
 			//aplikasikan filter objek sharpen pada gambar2
 			sharpen.ApplyInPlace(gambar2);
 			//tampilkan hasil gambar2 yang sudah diaplikasikan filter pada pictureBox2
+			pictureBox2.Image = gambar2;
+		}
+		void GrayscaleToolStripMenuItemClick(object sender, EventArgs e)
+		{
+			//jika gambar kosong/null maka akan mengembalikan nilai kosong/null
+			if (gambar==null) return;
+			//membuat filter dari inisiasi class Grayscale() dengan 3 argumen pada objek grayscale
+			Grayscale grayscale = new Grayscale(0.2125, 0.7154, 0.0721);
+			//aplikasikan filter objek grayscale pada gambar2
+			gambar2 = grayscale.Apply(gambar);
+			//tampilkan hasil gambar2 yang sudah diaplikasikan filter pada pictureBox2
+			pictureBox2.Image = gambar2;
+		}
+		void InvertToolStripMenuItemClick(object sender, EventArgs e)
+		{
+			//jika gambar kosong/null maka akan mengembalikan nilai kosong/null
+			if (gambar==null) return;
+			//membuat filter dari inisiasi class Invert() pada objek invert
+			Invert invert = new Invert( );
+			//clone variable gambar pada variable gambar2
+			gambar2 = (Bitmap) gambar.Clone();
+			//aplikasikan filter objek invert pada gambar2
+			invert.ApplyInPlace(gambar2);
+			//tampilkan hasil gambar2 yang sudah diaplikasikan filter pada pictureBox2
+			pictureBox2.Image = gambar2;
+		}
+		void ThresholdingToolStripMenuItemClick(object sender, EventArgs e)
+		{
+			if (gambar==null) return;
+			gambar2 = gambar.Clone(new Rectangle(0,0,gambar.Width,gambar.Height),
+			                       System.Drawing.Imaging.PixelFormat.Format24bppRgb);
+			Grayscale grayscaleF = new Grayscale(0.2125, 0.7154, 0.0721);
+			gambar2 = grayscaleF.Apply(gambar2);
+			OtsuThreshold otsuThreshold = new OtsuThreshold( );
+			//tampilkan hasil gambar2 yang sudah diaplikasikan filter pada pictureBox2
+			otsuThreshold.ApplyInPlace( gambar2 );
 			pictureBox2.Image = gambar2;
 		}
 	}

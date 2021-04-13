@@ -198,6 +198,7 @@ namespace Diki_Taufik_Gurohman_E32190192_2
 			this.grayscaleToolStripMenuItem.Name = "grayscaleToolStripMenuItem";
 			this.grayscaleToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
 			this.grayscaleToolStripMenuItem.Text = "Grayscale";
+			this.grayscaleToolStripMenuItem.Click += new System.EventHandler(this.GrayscaleToolStripMenuItemClick);
 			// 
 			// blurToolStripMenuItem
 			// 
@@ -218,12 +219,14 @@ namespace Diki_Taufik_Gurohman_E32190192_2
 			this.invertToolStripMenuItem.Name = "invertToolStripMenuItem";
 			this.invertToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
 			this.invertToolStripMenuItem.Text = "Invert";
+			this.invertToolStripMenuItem.Click += new System.EventHandler(this.InvertToolStripMenuItemClick);
 			// 
 			// thresholdingToolStripMenuItem
 			// 
 			this.thresholdingToolStripMenuItem.Name = "thresholdingToolStripMenuItem";
 			this.thresholdingToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
 			this.thresholdingToolStripMenuItem.Text = "Thresholding";
+			this.thresholdingToolStripMenuItem.Click += new System.EventHandler(this.ThresholdingToolStripMenuItemClick);
 			// 
 			// pictureBox1
 			// 
