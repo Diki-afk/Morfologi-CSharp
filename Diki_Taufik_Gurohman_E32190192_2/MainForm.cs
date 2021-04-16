@@ -126,13 +126,20 @@ namespace Diki_Taufik_Gurohman_E32190192_2
 		}
 		void BrightNessToolStripMenuItemClick(object sender, EventArgs e)
 		{
+			//jika gambar kosong/null maka akan mengembalikan nilai kosong/null
 			if (gambar==null) return;
+			//clone variable gambar ke variable gambar2 dan menginisiasi class Rectangle
+			//dan menerapkan format pixel 24bppRgb
 			gambar2 = gambar.Clone(new Rectangle(0,0,gambar.Width,gambar.Height),
 			                       System.Drawing.Imaging.PixelFormat.Format24bppRgb);
-			
+			//calculate maximum value pada gambar2
 			AForge.Imaging.ImageStatistics stat = new AForge.Imaging.ImageStatistics( gambar2 );
+			//menginisiasi varibale max
 			int max = Math.Max(Math.Max(stat.Red.Max, stat.Green.Max), stat.Blue.Max);
+			//membuat filter dari inisiasi class BrightnessCorrection() pada objek brightnessCorrection
+			//dengan argumen 255-max
 			BrightnessCorrection brightnessCorrection = new BrightnessCorrection(255-max);
+			//menerapkan filter pada gambar2
 			brightnessCorrection.ApplyInPlace(gambar2);
 			pictureBox2.Image = gambar2;
 		}
@@ -207,7 +214,7 @@ namespace Diki_Taufik_Gurohman_E32190192_2
 			if (gambar==null) return;
 			//membuat filter dari inisiasi class Grayscale() dengan 3 argumen pada objek grayscale
 			Grayscale grayscale = new Grayscale(0.2125, 0.7154, 0.0721);
-			//aplikasikan filter objek grayscale pada gambar2
+			//aplikasikan filter objek grayscale pada gambar lalu diinisiasi ke gambar2
 			gambar2 = grayscale.Apply(gambar);
 			//tampilkan hasil gambar2 yang sudah diaplikasikan filter pada pictureBox2
 			pictureBox2.Image = gambar2;
@@ -227,14 +234,21 @@ namespace Diki_Taufik_Gurohman_E32190192_2
 		}
 		void ThresholdingToolStripMenuItemClick(object sender, EventArgs e)
 		{
+			//jika gambar kosong/null maka akan mengembalikan nilai kosong/null
 			if (gambar==null) return;
+			//clone variable gambar ke variable gambar2 dan menginisiasi class Rectangle
+			//dan menerapkan format pixel 24bppRgb
 			gambar2 = gambar.Clone(new Rectangle(0,0,gambar.Width,gambar.Height),
 			                       System.Drawing.Imaging.PixelFormat.Format24bppRgb);
+			//convert ke grayscale terlebih dahulu lalu aplikasikan filter thresholding.
+			//inisiasi filter grayscale disertai argumen
 			Grayscale grayscaleF = new Grayscale(0.2125, 0.7154, 0.0721);
 			gambar2 = grayscaleF.Apply(gambar2);
+			//inisiasi filter thresholding
 			OtsuThreshold otsuThreshold = new OtsuThreshold( );
-			//tampilkan hasil gambar2 yang sudah diaplikasikan filter pada pictureBox2
+			//aplikasikan filter pada gambar2
 			otsuThreshold.ApplyInPlace( gambar2 );
+			//tampilkan pada picturebox2
 			pictureBox2.Image = gambar2;
 		}
 	}
