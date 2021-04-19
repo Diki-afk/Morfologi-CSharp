@@ -326,7 +326,7 @@ namespace Diki_Taufik_Gurohman_E32190192_2
 			Grayscale grayscaleF = new Grayscale(0.2125, 0.7154, 0.0721);
 			//aplikasikan filter grayscale ke gambar2
 			gambar2 = grayscaleF.Apply(gambar2);
-			//inisiasi filter Kirsch
+			//inisiasi filter Robinson
 			Accord.Imaging.Filters.RobinsonEdgeDetector robinsonEdgeDetector = new Accord.Imaging.Filters.RobinsonEdgeDetector();
 			//aplikasikan filter pada gambar2
 			gambar2	= robinsonEdgeDetector.Apply(gambar2);
@@ -341,7 +341,7 @@ namespace Diki_Taufik_Gurohman_E32190192_2
 			//dan menerapkan format pixel 24bppRgb
 			gambar2 = gambar.Clone(new Rectangle(0,0,gambar.Width,gambar.Height),
 			                       System.Drawing.Imaging.PixelFormat.Format24bppRgb);
-			//convert ke grayscale terlebih dahulu lalu aplikasikan filter Robinson.
+			//convert ke grayscale terlebih dahulu lalu aplikasikan filter Canny.
 			//inisiasi filter grayscale disertai argumen
 			Grayscale grayscaleF = new Grayscale(0.2125, 0.7154, 0.0721);
 			//aplikasikan filter grayscale ke gambar2
