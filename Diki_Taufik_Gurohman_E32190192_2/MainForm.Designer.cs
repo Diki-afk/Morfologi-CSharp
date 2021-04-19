@@ -36,6 +36,12 @@ namespace Diki_Taufik_Gurohman_E32190192_2
 		private System.Windows.Forms.ToolStripMenuItem sharpenToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem invertToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem thresholdingToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem edgeToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem simpleToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem sobelToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem kirschToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem robinsonToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem cannyToolStripMenuItem;
 		
 		/// <summary>
 		/// Disposes resources used by the form.
@@ -76,6 +82,12 @@ namespace Diki_Taufik_Gurohman_E32190192_2
 			this.sharpenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.invertToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.thresholdingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.edgeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.simpleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.sobelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.kirschToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.robinsonToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.cannyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.pictureBox2 = new System.Windows.Forms.PictureBox();
 			this.button1 = new System.Windows.Forms.Button();
@@ -91,7 +103,8 @@ namespace Diki_Taufik_Gurohman_E32190192_2
 			this.morfologiToolStripMenuItem,
 			this.deteksiToolStripMenuItem,
 			this.kMeansToolStripMenuItem,
-			this.prosesToolStripMenuItem});
+			this.prosesToolStripMenuItem,
+			this.edgeToolStripMenuItem});
 			this.menuStrip1.Location = new System.Drawing.Point(0, 0);
 			this.menuStrip1.Name = "menuStrip1";
 			this.menuStrip1.Size = new System.Drawing.Size(555, 24);
@@ -227,6 +240,53 @@ namespace Diki_Taufik_Gurohman_E32190192_2
 			this.thresholdingToolStripMenuItem.Size = new System.Drawing.Size(225, 22);
 			this.thresholdingToolStripMenuItem.Text = "Thresholding";
 			this.thresholdingToolStripMenuItem.Click += new System.EventHandler(this.ThresholdingToolStripMenuItemClick);
+			// 
+			// edgeToolStripMenuItem
+			// 
+			this.edgeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+			this.simpleToolStripMenuItem,
+			this.sobelToolStripMenuItem,
+			this.kirschToolStripMenuItem,
+			this.robinsonToolStripMenuItem,
+			this.cannyToolStripMenuItem});
+			this.edgeToolStripMenuItem.Name = "edgeToolStripMenuItem";
+			this.edgeToolStripMenuItem.Size = new System.Drawing.Size(45, 20);
+			this.edgeToolStripMenuItem.Text = "Edge";
+			// 
+			// simpleToolStripMenuItem
+			// 
+			this.simpleToolStripMenuItem.Name = "simpleToolStripMenuItem";
+			this.simpleToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+			this.simpleToolStripMenuItem.Text = "Simple";
+			this.simpleToolStripMenuItem.Click += new System.EventHandler(this.SimpleToolStripMenuItemClick);
+			// 
+			// sobelToolStripMenuItem
+			// 
+			this.sobelToolStripMenuItem.Name = "sobelToolStripMenuItem";
+			this.sobelToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+			this.sobelToolStripMenuItem.Text = "Sobel";
+			this.sobelToolStripMenuItem.Click += new System.EventHandler(this.SobelToolStripMenuItemClick);
+			// 
+			// kirschToolStripMenuItem
+			// 
+			this.kirschToolStripMenuItem.Name = "kirschToolStripMenuItem";
+			this.kirschToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+			this.kirschToolStripMenuItem.Text = "Kirsch";
+			this.kirschToolStripMenuItem.Click += new System.EventHandler(this.KirschToolStripMenuItemClick);
+			// 
+			// robinsonToolStripMenuItem
+			// 
+			this.robinsonToolStripMenuItem.Name = "robinsonToolStripMenuItem";
+			this.robinsonToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+			this.robinsonToolStripMenuItem.Text = "Robinson";
+			this.robinsonToolStripMenuItem.Click += new System.EventHandler(this.RobinsonToolStripMenuItemClick);
+			// 
+			// cannyToolStripMenuItem
+			// 
+			this.cannyToolStripMenuItem.Name = "cannyToolStripMenuItem";
+			this.cannyToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+			this.cannyToolStripMenuItem.Text = "Canny";
+			this.cannyToolStripMenuItem.Click += new System.EventHandler(this.CannyToolStripMenuItemClick);
 			// 
 			// pictureBox1
 			// 

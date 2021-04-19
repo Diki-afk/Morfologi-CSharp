@@ -31,6 +31,21 @@
     <DefineConstants>TRACE</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Accord">
+      <HintPath>..\..\..\..\..\Downloads\BKPM PCD pdf\libs\Accord.dll</HintPath>
+    </Reference>
+    <Reference Include="Accord.Imaging">
+      <HintPath>..\..\..\..\..\Downloads\BKPM PCD pdf\libs\Accord.Imaging.dll</HintPath>
+    </Reference>
+    <Reference Include="Accord.MachineLearning">
+      <HintPath>..\..\..\..\..\Downloads\BKPM PCD pdf\libs\Accord.MachineLearning.dll</HintPath>
+    </Reference>
+    <Reference Include="Accord.Math">
+      <HintPath>..\..\..\..\..\Downloads\BKPM PCD pdf\libs\Accord.Math.dll</HintPath>
+    </Reference>
+    <Reference Include="Accord.Statistics">
+      <HintPath>..\..\..\..\..\Downloads\BKPM PCD pdf\libs\Accord.Statistics.dll</HintPath>
+    </Reference>
     <Reference Include="AForge">
       <HintPath>..\..\..\..\..\Downloads\Release\AForge.dll</HintPath>
     </Reference>

@@ -12,3 +12,15 @@ C:\Users\lenovo\OneDrive\Dokumen\SharpDevelop Projects\Diki_Taufik_Gurohman_E321
 C:\Users\lenovo\OneDrive\Dokumen\SharpDevelop Projects\Diki_Taufik_Gurohman_E32190192_2\Diki_Taufik_Gurohman_E32190192_2\bin\Debug\AForge.Imaging.xml
 C:\Users\lenovo\OneDrive\Dokumen\SharpDevelop Projects\Diki_Taufik_Gurohman_E32190192_2\Diki_Taufik_Gurohman_E32190192_2\bin\Debug\AForge.xml
 C:\Users\lenovo\OneDrive\Dokumen\SharpDevelop Projects\Diki_Taufik_Gurohman_E32190192_2\Diki_Taufik_Gurohman_E32190192_2\bin\Debug\AForge.Math.xml
+C:\Users\lenovo\OneDrive\Dokumen\SharpDevelop Projects\Diki_Taufik_Gurohman_E32190192_2\Diki_Taufik_Gurohman_E32190192_2\bin\Debug\Accord.dll
+C:\Users\lenovo\OneDrive\Dokumen\SharpDevelop Projects\Diki_Taufik_Gurohman_E32190192_2\Diki_Taufik_Gurohman_E32190192_2\bin\Debug\Accord.Imaging.dll
+C:\Users\lenovo\OneDrive\Dokumen\SharpDevelop Projects\Diki_Taufik_Gurohman_E32190192_2\Diki_Taufik_Gurohman_E32190192_2\bin\Debug\Accord.MachineLearning.dll
+C:\Users\lenovo\OneDrive\Dokumen\SharpDevelop Projects\Diki_Taufik_Gurohman_E32190192_2\Diki_Taufik_Gurohman_E32190192_2\bin\Debug\Accord.Math.dll
+C:\Users\lenovo\OneDrive\Dokumen\SharpDevelop Projects\Diki_Taufik_Gurohman_E32190192_2\Diki_Taufik_Gurohman_E32190192_2\bin\Debug\Accord.Statistics.dll
+C:\Users\lenovo\OneDrive\Dokumen\SharpDevelop Projects\Diki_Taufik_Gurohman_E32190192_2\Diki_Taufik_Gurohman_E32190192_2\bin\Debug\Accord.Math.Core.dll
+C:\Users\lenovo\OneDrive\Dokumen\SharpDevelop Projects\Diki_Taufik_Gurohman_E32190192_2\Diki_Taufik_Gurohman_E32190192_2\bin\Debug\Accord.xml
+C:\Users\lenovo\OneDrive\Dokumen\SharpDevelop Projects\Diki_Taufik_Gurohman_E32190192_2\Diki_Taufik_Gurohman_E32190192_2\bin\Debug\Accord.Imaging.xml
+C:\Users\lenovo\OneDrive\Dokumen\SharpDevelop Projects\Diki_Taufik_Gurohman_E32190192_2\Diki_Taufik_Gurohman_E32190192_2\bin\Debug\Accord.MachineLearning.xml
+C:\Users\lenovo\OneDrive\Dokumen\SharpDevelop Projects\Diki_Taufik_Gurohman_E32190192_2\Diki_Taufik_Gurohman_E32190192_2\bin\Debug\Accord.Math.xml
+C:\Users\lenovo\OneDrive\Dokumen\SharpDevelop Projects\Diki_Taufik_Gurohman_E32190192_2\Diki_Taufik_Gurohman_E32190192_2\bin\Debug\Accord.Statistics.xml
+C:\Users\lenovo\OneDrive\Dokumen\SharpDevelop Projects\Diki_Taufik_Gurohman_E32190192_2\Diki_Taufik_Gurohman_E32190192_2\bin\Debug\Accord.Math.Core.xml

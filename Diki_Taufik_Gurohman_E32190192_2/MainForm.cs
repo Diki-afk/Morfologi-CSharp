@@ -13,6 +13,7 @@ using System.Windows.Forms;
 using AForge.Imaging;
 //tambahkan library dari file yang sudah diinput pada reference
 using AForge.Imaging.Filters;
+using System.Drawing.Imaging;
 
 namespace Diki_Taufik_Gurohman_E32190192_2
 {
@@ -243,11 +244,112 @@ namespace Diki_Taufik_Gurohman_E32190192_2
 			//convert ke grayscale terlebih dahulu lalu aplikasikan filter thresholding.
 			//inisiasi filter grayscale disertai argumen
 			Grayscale grayscaleF = new Grayscale(0.2125, 0.7154, 0.0721);
+			//aplikasikan filter grayscale ke gambar2
 			gambar2 = grayscaleF.Apply(gambar2);
 			//inisiasi filter thresholding
 			OtsuThreshold otsuThreshold = new OtsuThreshold( );
 			//aplikasikan filter pada gambar2
 			otsuThreshold.ApplyInPlace( gambar2 );
+			//tampilkan pada picturebox2
+			pictureBox2.Image = gambar2;
+		}
+		void SimpleToolStripMenuItemClick(object sender, EventArgs e)
+		{
+			//jika gambar kosong/null maka akan mengembalikan nilai kosong/null
+			if (gambar==null) return;
+			//clone variable gambar ke variable gambar2 dan menginisiasi class Rectangle
+			//dan menerapkan format pixel 24bppRgb
+			gambar2 = gambar.Clone(new Rectangle(0,0,gambar.Width,gambar.Height),
+			                       System.Drawing.Imaging.PixelFormat.Format24bppRgb);
+			//convert ke grayscale terlebih dahulu lalu aplikasikan filter edges.
+			//inisiasi filter grayscale disertai argumen
+			Grayscale grayscaleF = new Grayscale(0.2125, 0.7154, 0.0721);
+			//aplikasikan filter grayscale ke gambar2
+			gambar2 = grayscaleF.Apply(gambar2);
+			//inisiasi filter Edges 
+			Edges edges = new Edges();
+			//aplikasikan filter pada gambar2
+			edges.ApplyInPlace(gambar2);
+			//tampilkan pada picturebox2
+			pictureBox2.Image = gambar2;
+		}
+		void SobelToolStripMenuItemClick(object sender, EventArgs e)
+		{
+			//jika gambar kosong/null maka akan mengembalikan nilai kosong/null
+			if (gambar==null) return;
+			//clone variable gambar ke variable gambar2 dan menginisiasi class Rectangle
+			//dan menerapkan format pixel 24bppRgb
+			gambar2 = gambar.Clone(new Rectangle(0,0,gambar.Width,gambar.Height),
+			                       System.Drawing.Imaging.PixelFormat.Format24bppRgb);
+			//convert ke grayscale terlebih dahulu lalu aplikasikan filter Sobel.
+			//inisiasi filter grayscale disertai argumen
+			Grayscale grayscaleF = new Grayscale(0.2125, 0.7154, 0.0721);
+			//aplikasikan filter grayscale ke gambar2
+			gambar2 = grayscaleF.Apply(gambar2);
+			//inisiasi filter Sobel
+			SobelEdgeDetector sobelEdgeDetector = new SobelEdgeDetector();
+			//aplikasikan filter pada gambar2
+			sobelEdgeDetector.ApplyInPlace(gambar2);
+			//tampilkan pada picturebox2
+			pictureBox2.Image = gambar2;
+		}
+		void KirschToolStripMenuItemClick(object sender, EventArgs e)
+		{
+			//jika gambar kosong/null maka akan mengembalikan nilai kosong/null
+			if (gambar==null) return;
+			//clone variable gambar ke variable gambar2 dan menginisiasi class Rectangle
+			//dan menerapkan format pixel 24bppRgb
+			gambar2 = gambar.Clone(new Rectangle(0,0,gambar.Width,gambar.Height),
+			                       System.Drawing.Imaging.PixelFormat.Format24bppRgb);
+			//convert ke grayscale terlebih dahulu lalu aplikasikan filter Kirsch.
+			//inisiasi filter grayscale disertai argumen
+			Grayscale grayscaleF = new Grayscale(0.2125, 0.7154, 0.0721);
+			//aplikasikan filter grayscale ke gambar2
+			gambar2 = grayscaleF.Apply(gambar2);
+			//inisiasi filter Kirsch
+			Accord.Imaging.Filters.KirschEdgeDetector kirschEdgeDetector = new Accord.Imaging.Filters.KirschEdgeDetector();
+			//aplikasikan filter pada gambar2
+			gambar2	= kirschEdgeDetector.Apply(gambar2);
+			//tampilkan pada picturebox2
+			pictureBox2.Image = gambar2;
+		}
+		void RobinsonToolStripMenuItemClick(object sender, EventArgs e)
+		{
+			//jika gambar kosong/null maka akan mengembalikan nilai kosong/null
+			if (gambar==null) return;
+			//clone variable gambar ke variable gambar2 dan menginisiasi class Rectangle
+			//dan menerapkan format pixel 24bppRgb
+			gambar2 = gambar.Clone(new Rectangle(0,0,gambar.Width,gambar.Height),
+			                       System.Drawing.Imaging.PixelFormat.Format24bppRgb);
+			//convert ke grayscale terlebih dahulu lalu aplikasikan filter Robinson.
+			//inisiasi filter grayscale disertai argumen
+			Grayscale grayscaleF = new Grayscale(0.2125, 0.7154, 0.0721);
+			//aplikasikan filter grayscale ke gambar2
+			gambar2 = grayscaleF.Apply(gambar2);
+			//inisiasi filter Kirsch
+			Accord.Imaging.Filters.RobinsonEdgeDetector robinsonEdgeDetector = new Accord.Imaging.Filters.RobinsonEdgeDetector();
+			//aplikasikan filter pada gambar2
+			gambar2	= robinsonEdgeDetector.Apply(gambar2);
+			//tampilkan pada picturebox2
+			pictureBox2.Image = gambar2;
+		}
+		void CannyToolStripMenuItemClick(object sender, EventArgs e)
+		{
+			//jika gambar kosong/null maka akan mengembalikan nilai kosong/null
+			if (gambar==null) return;
+			//clone variable gambar ke variable gambar2 dan menginisiasi class Rectangle
+			//dan menerapkan format pixel 24bppRgb
+			gambar2 = gambar.Clone(new Rectangle(0,0,gambar.Width,gambar.Height),
+			                       System.Drawing.Imaging.PixelFormat.Format24bppRgb);
+			//convert ke grayscale terlebih dahulu lalu aplikasikan filter Robinson.
+			//inisiasi filter grayscale disertai argumen
+			Grayscale grayscaleF = new Grayscale(0.2125, 0.7154, 0.0721);
+			//aplikasikan filter grayscale ke gambar2
+			gambar2 = grayscaleF.Apply(gambar2);
+			//inisiasi filter Canny
+			CannyEdgeDetector cannyEdgeDetector = new CannyEdgeDetector();
+			//aplikasikan filter pada gambar2
+			cannyEdgeDetector.ApplyInPlace(gambar2);
 			//tampilkan pada picturebox2
 			pictureBox2.Image = gambar2;
 		}
